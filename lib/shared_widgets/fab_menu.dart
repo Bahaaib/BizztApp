@@ -38,12 +38,19 @@ class FabMenu extends StatefulWidget {
   }
 
   FabMenu addActionFab(IconData icon,
-      {String tooltip, VoidCallback onPressed, bool mini = false}) {
+      {String tooltip,
+      VoidCallback onPressed,
+      bool mini = false,
+      int color = 0xffff0000}) {
     if (_fabList.length > 3) {
       throw FormatException('Expected up to three floatingActionButton');
     }
     _fabList.add(FloatingActionButton(
-        onPressed: onPressed, child: Icon(icon), tooltip: tooltip, mini: mini));
+        backgroundColor: Color(color),
+        onPressed: onPressed,
+        child: Icon(icon),
+        tooltip: tooltip,
+        mini: mini));
     return this;
   }
 
