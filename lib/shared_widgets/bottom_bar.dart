@@ -27,6 +27,13 @@ class BottomNavBarState extends State<BottomNavBar> {
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
             icon: Icon(
+              Icons.home,
+            ),
+            title: Text(
+              'Home',
+            )),
+        BottomNavigationBarItem(
+            icon: Icon(
               Icons.alternate_email,
             ),
             title: Text(
@@ -45,13 +52,6 @@ class BottomNavBarState extends State<BottomNavBar> {
             ),
             title: Text(
               'Advantages',
-            )),
-        BottomNavigationBarItem(
-            icon: Icon(
-              Icons.people,
-            ),
-            title: Text(
-              'Our Customers',
             ))
       ],
       currentIndex: _currentIndex,
