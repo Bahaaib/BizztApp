@@ -235,7 +235,7 @@ class _CenterFabState extends State<CenterFab> {
         // Center Menu
         secondChild: Padding(
             padding: EdgeInsets.only(bottom: 10.0, right: 10.0),
-            child: FloatingActionButton(
+            child: FloatingActionButton(backgroundColor: Color(0xff6ec1e4),
                 highlightElevation: 0,
                 elevation: 0,
                 onPressed: changeState,
