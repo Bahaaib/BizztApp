@@ -37,7 +37,7 @@ class PromotionState extends State<PromotionServicesSection> {
         child: Container(
             margin:
                 EdgeInsets.only(top: 10.0, bottom: position == 8 ? 70.0 : 20.0),
-            width: 380,
+            width: width < 400.0 ? 340.0 : 380.0,
             child: Card(
               elevation: 8,
               shape: RoundedRectangleBorder(
