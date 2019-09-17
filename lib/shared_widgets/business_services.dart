@@ -26,7 +26,7 @@ class BusinessState extends State<BusinessServicesSection> {
           padding:
           EdgeInsets.only(top: 50.0, right: 20.0, left: 20.0, bottom: 20.0),
           child: Text(
-            'שירותי ניהול העסקים של Bizzt',
+            'שירותי ניהול העסקים של BIZZT',
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
           ),

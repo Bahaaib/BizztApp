@@ -6,10 +6,13 @@ import 'package:bizzt_app/shared_widgets/promotion_services.dart';
 import 'package:bizzt_app/shared_widgets/business_services.dart';
 import 'package:bizzt_app/shared_widgets/intro_widget.dart';
 import 'package:bizzt_app/shared_widgets/advantages_section.dart';
+import 'dart:async';
 
 class HomePageView extends HomePageViewModel {
   int _currentIndex = 0;
   final int _primaryColor = 0xff6ec1e4;
+  final PageController controller = PageController();
+  final StreamController<int> _streamController = StreamController<int>();
   final List<Widget> _barItemsList = [
     IntroSection(),
     PromotionServicesSection(),
@@ -20,10 +23,24 @@ class HomePageView extends HomePageViewModel {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavBar(_onNavBarItemTapped),
+      bottomNavigationBar: BottomNavBar(
+        _onNavBarItemTapped,
+        bottomIndexStream: _streamController.stream,
+      ),
       body: Stack(
         children: <Widget>[
-          _barItemsList[_currentIndex],
+          PageView(
+            children: _barItemsList,
+            scrollDirection: Axis.horizontal,
+            pageSnapping: true,
+            physics: BouncingScrollPhysics(),
+            controller: controller,
+            onPageChanged: (index) {
+              setState(() {
+                _streamController.add(index);
+              });
+            },
+          ),
           Row(
             children: <Widget>[
               Expanded(
@@ -50,6 +67,8 @@ class HomePageView extends HomePageViewModel {
   void _onNavBarItemTapped(int index) {
     setState(() {
       _currentIndex = index;
+      controller.animateToPage(index,
+          duration: Duration(milliseconds: 200), curve: Curves.ease);
       print('tapped index $index');
     });
   }
