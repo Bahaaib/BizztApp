@@ -42,5 +42,9 @@ flutter:
     - assets/start.jpg
     - assets/courses.png
     - assets/crm.png
+    - assets/ic_cloud.png
+    - assets/ic_security.png
+    - assets/ic_support.png
+    - assets/ic_service.png
 
 

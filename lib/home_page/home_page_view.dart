@@ -5,6 +5,7 @@ import 'package:bizzt_app/shared_widgets/bottom_bar.dart';
 import 'package:bizzt_app/shared_widgets/promotion_services.dart';
 import 'package:bizzt_app/shared_widgets/business_services.dart';
 import 'package:bizzt_app/shared_widgets/intro_widget.dart';
+import 'package:bizzt_app/shared_widgets/advantages_section.dart';
 
 class HomePageView extends HomePageViewModel {
   int _currentIndex = 0;
@@ -12,7 +13,8 @@ class HomePageView extends HomePageViewModel {
   final List<Widget> _barItemsList = [
     IntroSection(),
     PromotionServicesSection(),
-    BusinessServicesSection()
+    BusinessServicesSection(),
+    AdvantagesSection()
   ];
 
   @override
