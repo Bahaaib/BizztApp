@@ -24,7 +24,7 @@ class BusinessState extends State<BusinessServicesSection> {
       return Center(
         child: Padding(
           padding:
-          EdgeInsets.only(top: 50.0, right: 20.0, left: 20.0, bottom: 20.0),
+              EdgeInsets.only(top: 50.0, right: 20.0, left: 20.0, bottom: 20.0),
           child: Text(
             'שירותי ניהול העסקים של BIZZT',
             textAlign: TextAlign.center,
@@ -36,8 +36,8 @@ class BusinessState extends State<BusinessServicesSection> {
     return Center(
         child: Container(
             margin:
-            EdgeInsets.only(top: 10.0, bottom: position == 8 ? 70.0 : 20.0),
-            width: 380,
+                EdgeInsets.only(top: 10.0, bottom: position == 8 ? 70.0 : 20.0),
+            width: width < 400.0 ? 340.0 : 380.0,
             child: Card(
               elevation: 8,
               shape: RoundedRectangleBorder(
@@ -51,7 +51,7 @@ class BusinessState extends State<BusinessServicesSection> {
                           topRight: Radius.circular(15.0)),
                       image: DecorationImage(
                           colorFilter:
-                          ColorFilter.mode(Colors.grey, BlendMode.multiply),
+                              ColorFilter.mode(Colors.grey, BlendMode.multiply),
                           image: AssetImage(
                               TextUtils.businessServicesImages[position]),
                           fit: BoxFit.cover)),
