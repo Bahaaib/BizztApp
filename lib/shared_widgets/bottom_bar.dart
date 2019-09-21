@@ -40,7 +40,6 @@ class BottomNavBarState extends State<BottomNavBar> {
 
   @override
   Widget build(BuildContext context) {
-    print('visited build');
     return BottomNavigationBar(
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
@@ -55,7 +54,7 @@ class BottomNavBarState extends State<BottomNavBar> {
               Icons.alternate_email,
             ),
             title: Text(
-              'Promotion Services',
+              'Ad Services',
             )),
         BottomNavigationBarItem(
             icon: Icon(
