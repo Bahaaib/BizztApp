@@ -62,7 +62,7 @@ class PricePageView extends PricePageViewModel {
   Widget _buildListItems(BuildContext context, int position, double width) {
     return Center(
         child: Container(
-      margin: EdgeInsets.only(bottom: 10.0),
+      margin: EdgeInsets.only(bottom: 13.0),
       decoration: BoxDecoration(color: Colors.white, boxShadow: [
         BoxShadow(color: Colors.grey, blurRadius: 15.0, spreadRadius: -5.0)
       ]),
@@ -79,7 +79,7 @@ class PricePageView extends PricePageViewModel {
               ),
             ),
             height: 80.0,
-            decoration: BoxDecoration(color: Colors.grey),
+            decoration: BoxDecoration(color: Color(_primaryColor)),
           ),
           Container(
             child: Center(
