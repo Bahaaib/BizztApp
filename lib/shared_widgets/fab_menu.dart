@@ -41,11 +41,13 @@ class FabMenu extends StatefulWidget {
       {String tooltip,
       VoidCallback onPressed,
       bool mini = false,
-      int color = 0xffff0000}) {
+      int color = 0xffff0000,
+      String heroTag = 'tag'}) {
     if (_fabList.length > 3) {
       throw FormatException('Expected up to three floatingActionButton');
     }
     _fabList.add(FloatingActionButton(
+        heroTag: heroTag,
         backgroundColor: Color(color),
         onPressed: onPressed,
         child: Icon(icon),
@@ -178,6 +180,7 @@ class _FabMenuDelegate extends MultiChildLayoutDelegate {
   bool shouldRelayout(_FabMenuDelegate oldDelegate) => true;
 }
 
+// ignore: must_be_immutable
 class CenterFab extends StatefulWidget {
   IconData icon;
   String tooltip;
@@ -226,6 +229,7 @@ class _CenterFabState extends State<CenterFab> {
         firstChild: Padding(
           padding: EdgeInsets.only(bottom: 10.0, right: 10.0),
           child: FloatingActionButton(
+              heroTag: 'close',
               highlightElevation: 0,
               onPressed: changeState,
               child: Icon(Icons.close),
@@ -235,7 +239,9 @@ class _CenterFabState extends State<CenterFab> {
         // Center Menu
         secondChild: Padding(
             padding: EdgeInsets.only(bottom: 10.0, right: 10.0),
-            child: FloatingActionButton(backgroundColor: Color(0xff6ec1e4),
+            child: FloatingActionButton(
+                heroTag: 'open',
+                backgroundColor: Color(0xff6ec1e4),
                 highlightElevation: 0,
                 elevation: 0,
                 onPressed: changeState,

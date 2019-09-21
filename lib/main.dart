@@ -4,7 +4,7 @@ import 'package:bizzt_app/price_page/price_page.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  final Widget _home = PricePage();
+  final Widget _home = HomePage();
 
   @override
   Widget build(BuildContext context) {
