@@ -126,4 +126,11 @@ class TextUtils {
     priceList2,
     priceList3
   ];
+
+  static List<String> stats = [
+    'לקוחות בעמוד הראשון בגוגל',
+    'פרויקטים שהושלמו',
+    'פרויקטים חדשים',
+    'לקוחות מרוצים'
+  ];
 }

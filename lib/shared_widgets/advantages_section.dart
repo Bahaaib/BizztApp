@@ -93,7 +93,7 @@ class AdvantagesSection extends StatelessWidget {
                                     left: 20.0,
                                     bottom: 20.0),
                                 child: Text(
-                                  TextUtils.advantages[1],
+                                  TextUtils.advantages[2],
                                   textAlign: TextAlign.center,
                                 ))
                           ],
@@ -121,7 +121,7 @@ class AdvantagesSection extends StatelessWidget {
                                     left: 20.0,
                                     bottom: 80.0),
                                 child: Text(
-                                  TextUtils.advantages[1],
+                                  TextUtils.advantages[3],
                                   textAlign: TextAlign.center,
                                 ))
                           ],
