@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:bizzt_app/home_page/home_page_view.dart';
+import 'package:bizzt_app/stats_page/stats_page_view.dart';
 
 class StatsPage extends StatefulWidget {
   @override
