@@ -1,7 +1,7 @@
 name: bizzt_app
 description: A new Flutter application.
 
-version: 1.0.0+1
+version: 1.2.0+3
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
@@ -47,5 +47,11 @@ flutter:
     - assets/ic_security.png
     - assets/ic_support.png
     - assets/ic_service.png
+    - assets/c1.webp
+    - assets/c2.webp
+    - assets/c3.webp
+    - assets/c4.webp
+    - assets/c5.webp
+    - assets/c6.webp
 
 

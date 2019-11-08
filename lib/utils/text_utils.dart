@@ -133,4 +133,13 @@ class TextUtils {
     'פרויקטים חדשים',
     'לקוחות מרוצים'
   ];
+
+  static List<String> customersImages = [
+    'assets/c1.webp',
+    'assets/c2.webp',
+    'assets/c3.webp',
+    'assets/c4.webp',
+    'assets/c5.webp',
+    'assets/c6.webp'
+  ];
 }

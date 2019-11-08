@@ -9,7 +9,7 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="bizzt_app"
-        android:icon="@mipmap/ic_temp">
+        android:icon="@mipmap/ic_bizzt">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

@@ -1,3 +1,4 @@
+import 'package:bizzt_app/customers_page/customers_page.dart';
 import 'package:flutter/material.dart';
 import 'package:bizzt_app/home_page/home_page_viewmodel.dart';
 import 'package:bizzt_app/shared_widgets/fab_menu.dart';
@@ -52,7 +53,8 @@ class HomePageView extends HomePageViewModel {
                       .addActionFab(Icons.people,
                           color: _primaryColor,
                           heroTag: 'people', onPressed: () {
-                print('Clicked info icon');
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CustomersPage()));
               }).addActionFab(Icons.trending_up,
                           color: _primaryColor,
                           heroTag: 'stats', onPressed: () {
